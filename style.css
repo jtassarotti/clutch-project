@@ -37,6 +37,17 @@ div.buttons {
   margin-top: 5px;
 }
 
+.site-title {
+  text-align: center;
+}
+
+.site-logo {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  display: inline-block;
+}
+
 img.card-img-top {
   height: 75px;
   display: block;
