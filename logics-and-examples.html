@@ -60,12 +60,11 @@
       features are useful for reasoning about complex program
       behaviors and language effects.
       The logics in the Clutch project target a range of different program
-      specifications and properties, such as:<br /><br />
+      specifications and properties as described in the following sections.:<br /><br />
 
-      <ul>
-        <li>
-          <b>Contextual Equivalence:</b>
-
+      <dl class="properties-list">
+        <dt>Contextual Equivalence</dt>
+        <dd>
           Proving that two randomized programs are equivalent has
           important applications in security and cryptography, where it is
           common to argue that an attacker cannot distinguish between a
@@ -100,10 +99,9 @@
                 <li><a href="https://github.com/logsem/clutch/blob/main/theories/approxis/examples/b_tree.v">Sampling a uniform key from a B+ tree</a></li>
                 <li><a href="https://github.com/logsem/clutch/blob/main/theories/approxis/examples/rejection_samplers.v">Rejection samplers</a></li>
               </ul>
-        </li>
-        <li>
-          <b>Differential Privacy:</b>
-
+        </dd>
+        <dt>Differential Privacy</dt>
+        <dd>
           Differential privacy (DP) is a standard framework for privacy-preserving data
           analysis: a randomized program is differentially private when small
           changes to its input (e.g. replacing one user's record) produce only
@@ -128,10 +126,9 @@
             <li><a href="https://github.com/logsem/clutch/blob/pldi26-clutch-dp/theories/diffpriv/examples/privacy_filter.v">OpenDP-style privacy filter</a></li>
             <li><a href="https://github.com/logsem/clutch/blob/pldi26-clutch-dp/theories/diffpriv/examples/auto_avg.v">Automatic averaging with budget-tracking</a></li>
           </ul>
-        </li>
-        <li>
-          <b>Error Probability Bounding:</b>
-
+        </dd>
+        <dt>Error Probability Bounds</dt>
+        <dd>
           Many randomized algorithms and probabilistic data structures
           (hash tables, Bloom filters, Miller&ndash;Rabin primality testing,
           rejection samplers, &hellip;) only return the right answer with
@@ -164,9 +161,9 @@
             <li><a href="https://github.com/logsem/clutch/blob/main/theories/coneris/examples/concurrent_hash.v">Concurrent hash table</a></li>
             <li><a href="https://github.com/logsem/clutch/blob/main/theories/coneris/examples/bloom_filter/concurrent_bloom_filter.v">Concurrent Bloom filter</a></li>
           </ul>
-        </li>
-        <li>
-          <b>Sampler Correctness:</b>
+        </dd>
+        <dt>Sampler Correctness</dt>
+        <dd>
 	  Although Eris was initially designed for reasoning about upper
 	  bounds of error probabilities, subsequent work showed that in fact
 	  it is possible to prove specifications in Eris that describe
@@ -189,10 +186,9 @@
             <li><a href="https://github.com/logsem/clutch/tree/cpp26-distributions/theories/eris/lib/sampling/negative_binomial">Negative binomial</a></li>
             <li><a href="https://github.com/logsem/clutch/tree/cpp26-distributions/theories/eris/lib/sampling/beta_binomial">Beta-binomial</a></li>
           </ul>
-        </li>
-        <li>
-          <b>Almost-Sure Termination:</b>
-
+        </dd>
+        <dt>Almost-Sure Termination</dt>
+        <dd>
           A randomized program <i>almost-surely terminates</i> if it
           terminates with probability 1. Establishing this is subtle for
           higher-order programs with general references, where recursion
@@ -220,7 +216,7 @@
           termination behavior is easier to analyze). Refinements are
           established by probabilistic couplings, much as in Clutch, and
           general higher-order recursion is handled with <b>guarded
-          recursion (L&ouml;b induction)</b><br /><br />
+          recursion (L&ouml;b induction)</b>.<br /><br />
 
           <b>Examples</b>:
           <ul class="inline-list">
@@ -230,8 +226,8 @@
             <li><a href="https://github.com/logsem/clutch/blob/main/theories/caliper/examples/galton_watson_tree.v">Galton&ndash;Watson tree sampler</a></li>
             <li><a href="https://github.com/logsem/clutch/blob/main/theories/caliper/examples/lazy_real.v">Lazy reals</a></li>
           </ul>
-        </li>
-      </ul>
+        </dd>
+      </dl>
 
     </div>
   </div>

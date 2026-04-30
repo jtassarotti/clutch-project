@@ -90,3 +90,16 @@ ul.inline-list li {
 ul.inline-list li:not(:last-child)::after {
   content: ", ";
 }
+
+dl.properties-list > dt {
+  font-size: 1.25em;
+  color: #5436c0;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+}
+dl.properties-list > dt:first-child {
+  margin-top: 0;
+}
+dl.properties-list > dd {
+  margin-bottom: 0.5em;
+}
