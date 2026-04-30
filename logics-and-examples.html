@@ -1,0 +1,243 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Logics and examples developed within the Clutch Project: a higher-order probabilistic separation logic framework, built on Iris and implemented in Rocq.">
+  <meta name="author" content="">
+  <meta name="referrer" content="origin-when-cross-origin">
+
+  <title>Logics and Examples — Clutch Project</title>
+
+  <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="bg-secondary py-5 mb-3 text-sm-center" style="--bs-bg-opacity : 0.1">
+      <div class="container-fluid">
+        <h1 style="margin-bottom: 20px;"><a href="index.html" style="color: inherit; text-decoration: none;">The Clutch Project</a></h1>
+        <p class="lead">A higher-order probabilistic separation logic framework, <br> built on Iris and implemented in the Rocq Prover</p>
+        <p>
+          <a href="https://github.com/logsem/clutch" class="btn btn-primary">Rocq Formalization</a>
+          <a href="https://mattermost.cs.au.dk/logsem/channels/clutch-helpdesk" class="btn btn-primary">Helpdesk Chatroom</a>
+        </p>
+        <p>
+          <a href="index.html#about" class="btn btn-light border" role="button">About</a>
+          <a href="index.html#logics" class="btn btn-light border" role="button">Logics and Examples</a>
+          <a href="index.html#events" class="btn btn-light border" role="button">Events</a>
+          <a href="index.html#publications" class="btn btn-light border" role="button">Publications</a>
+          <a href="index.html#groups" class="btn btn-light border" role="button">Research groups</a>
+          <a href="index.html#grants" class="btn btn-light border" role="button">Grants</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container" style="margin-bottom: 60px;">
+      <h2>Logics and Examples</h2>
+
+      The Clutch project family of logics use a <b>lifting-based</b>
+      approach, which re-uses the existing model of separation logic
+      assertions from Iris, and augments these with
+      additional <b>resources</b> or <b>ghost state</b> that is used
+      to track aspects of the probabilistic behavior of the
+      program. These resources are connected to the program's behavior
+      through a custom definition of the weakest precondition or Hoare
+      triple assertions.
+      The lifting-based approach was pioneered in logics such as pRHL
+      and aHL by Barthe et al. The Clutch project shows how to
+      adapt lifting to the setting of a modern higher-order separation logic.<br /><br />
+
+      The benefit of this approach is that it retains the expressive
+      features of Iris's modern separation logic framework, such as
+      impredicative invariants and custom resource algebras. These
+      features are useful for reasoning about complex program
+      behaviors and language effects.
+      The logics in the Clutch project target a range of different program
+      specifications and properties, such as:<br /><br />
+
+      <ul>
+        <li>
+          <b>Contextual Equivalence:</b>
+
+          Proving that two randomized programs are equivalent has
+          important applications in security and cryptography, where it is
+          common to argue that an attacker cannot distinguish between a
+          real implementation of a program and an ideal version that is
+          perfectly secure by construction.<br /><br />
+
+          The original Clutch logic provided support for proving such
+          equivalences in the setting of a higher-order language with
+          mutable state. Clutch is a <b>relational</b> logic, where
+          specifications relate the behaviors of two programs. The logic
+          works by constructing <b>probabilistic couplings</b> between the
+          two programs. It introduces new constructs called <b>presampling</b>
+          and <b>asynchronous couplings</b> that make it possible to apply
+          couplings in a rich language with higher-order features and general references.<br /><br />
+
+          Clutch supports proving <i>exact</i> equivalences, in which the two
+          programs must have precisely the same probability distribution. However, for many applications,
+          it is important to weaken this to <i>approximate</i> equivalences, where one bounds
+          the distance or difference between the distributions. The Approxis logic
+          generalizes Clutch to support these approximate equivalences. It uses a separationg logic
+          resource to track an "error budget" that bounds the distance between the two programs'
+          distributions.<br /><br />
+
+          <b>Examples</b>:
+              <ul class="inline-list">
+                <li><a href="https://github.com/logsem/clutch/blob/main/theories/clutch/examples/lazy_eager_coin.v">Lazy/eager coin</a></li>
+                <li><a href="https://github.com/logsem/clutch/blob/main/theories/clutch/examples/crypto/ElGamal.v">ElGamal public-key encryption reduction to DDH</a></li>
+                <li><a href="https://github.com/logsem/clutch/blob/main/theories/clutch/examples/hash.v">Eager and lazy hash functions</a></li>
+                <li><a href="https://github.com/logsem/clutch/blob/main/theories/clutch/examples/lazy_int.v">Lazily sampled big integers</a></li>
+                <li><a href="https://github.com/logsem/clutch/blob/main/theories/approxis/examples/prp_prf_adaptive.v">PRP/PRF Switching Lemma</a></li>
+                <li><a href="https://github.com/logsem/clutch/blob/main/theories/approxis/examples/prf_cpa.v">IND$-CPA security of a PRF-based symmetric encryption scheme</a></li>
+                <li><a href="https://github.com/logsem/clutch/blob/main/theories/approxis/examples/b_tree.v">Sampling a uniform key from a B+ tree</a></li>
+                <li><a href="https://github.com/logsem/clutch/blob/main/theories/approxis/examples/rejection_samplers.v">Rejection samplers</a></li>
+              </ul>
+        </li>
+        <li>
+          <b>Differential Privacy:</b>
+
+          Differential privacy (DP) is a standard framework for privacy-preserving data
+          analysis: a randomized program is differentially private when small
+          changes to its input (e.g. replacing one user's record) produce only
+          small changes to its output distribution, controlled by a numeric
+          <i>privacy budget</i><br /><br />
+
+          The <b>Clutch-DP</b> logic supports verifying differential privacy of
+          higher-order programs in this style. It treats the privacy budget
+          as a <b>separation logic resource</b>, so reasoning about the
+          composition of DP programs reduces to standard separation logic
+          accounting in which each part of a program consumes some of the budget.
+          Because the underlying language has higher-order
+          functions and local state, Clutch-DP can verify the kind of modular,
+          dynamic, library-style DP code &mdash; including <b>privacy filters</b>
+          and <b>caching</b> used in practice in libraries such as
+          <a href="https://opendp.org/">OpenDP</a>.<br /><br />
+
+          <b>Examples</b>:
+          <ul class="inline-list">
+            <li><a href="https://github.com/logsem/clutch/blob/pldi26-clutch-dp/theories/diffpriv/examples/report_noisy_max.v">Report Noisy Max</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/pldi26-clutch-dp/theories/diffpriv/examples/sparse_vector_technique.v">Online Sparse Vector Technique</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/pldi26-clutch-dp/theories/diffpriv/examples/privacy_filter.v">OpenDP-style privacy filter</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/pldi26-clutch-dp/theories/diffpriv/examples/auto_avg.v">Automatic averaging with budget-tracking</a></li>
+          </ul>
+        </li>
+        <li>
+          <b>Error Probability Bounding:</b>
+
+          Many randomized algorithms and probabilistic data structures
+          (hash tables, Bloom filters, Miller&ndash;Rabin primality testing,
+          rejection samplers, &hellip;) only return the right answer with
+          high probability, and using them safely depends on having a tight
+          bound on the probability that they fail.<br /><br />
+
+          The <b>Eris</b> logic introduces <b>error credits</b>: a separation
+          logic resource that tracks an upper bound on the probability that a
+          program returns an erroneous result. Treating an error bound as a
+          resource again brings the usual benefits of separation logic
+          such as compositionality and modularity. It also allows for a form
+	  of <i>amortized error reasoning</i>, analogous to the use of
+	  amortized analysis of algorithmic complexity.
+
+          The <b>Coneris</b> logic extends the error-credit approach to
+          <b>concurrent</b> programs.
+          Coneris internalizes a notion of
+          <i>randomized logical atomicity</i> using presampling tapes and a
+          new probabilistic update modality, allowing concurrent
+          probabilistic modules (e.g. shared hash tables, concurrent Bloom
+          filters) to be specified and verified modularly.<br /><br />
+
+          <b>Examples</b>:
+          <ul class="inline-list">
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/eris/examples/hash.v">Hash-table collision bounds</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/eris/examples/miller_rabin.v">Miller&ndash;Rabin primality test</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/eris/examples/approximate_samplers/approx_walkSAT.v">WalkSAT</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/eris/examples/merkle/merkle_tree.v">Merkle trees</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/eris/examples/fisher_yates.v">Fisher&ndash;Yates shuffle</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/coneris/examples/concurrent_hash.v">Concurrent hash table</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/coneris/examples/bloom_filter/concurrent_bloom_filter.v">Concurrent Bloom filter</a></li>
+          </ul>
+        </li>
+        <li>
+          <b>Sampler Correctness:</b>
+	  Although Eris was initially designed for reasoning about upper
+	  bounds of error probabilities, subsequent work showed that in fact
+	  it is possible to prove specifications in Eris that describe
+	  the complete distribution of behaviors of a program.
+
+          Using this approach it is possible to prove the correctness
+	  of implementations of <b>sampling routines</b>
+	  A common pattern in randomized programming is to build samplers
+          for complex distributions (e.g. binomial, geometric, beta-binomial,
+          etc.) on top of a primitive uniform sampler. Verifying such a
+          library has two goals: ensuring each sampler really implements
+          its target distribution, and giving clients of the library
+          specifications expressive enough to reason about them.<br /><br />
+
+          <b>Examples</b>:
+          <ul class="inline-list">
+            <li><a href="https://github.com/logsem/clutch/tree/cpp26-distributions/theories/eris/lib/sampling/bernoulli">Bernoulli</a></li>
+            <li><a href="https://github.com/logsem/clutch/tree/cpp26-distributions/theories/eris/lib/sampling/binomial">Binomial</a></li>
+            <li><a href="https://github.com/logsem/clutch/tree/cpp26-distributions/theories/eris/lib/sampling/geometric">Geometric</a></li>
+            <li><a href="https://github.com/logsem/clutch/tree/cpp26-distributions/theories/eris/lib/sampling/negative_binomial">Negative binomial</a></li>
+            <li><a href="https://github.com/logsem/clutch/tree/cpp26-distributions/theories/eris/lib/sampling/beta_binomial">Beta-binomial</a></li>
+          </ul>
+        </li>
+        <li>
+          <b>Almost-Sure Termination:</b>
+
+          A randomized program <i>almost-surely terminates</i> if it
+          terminates with probability 1. Establishing this is subtle for
+          higher-order programs with general references, where recursion
+          and looping can be encoded in many different ways and there is
+          no syntactic loop construct to induct on. The Clutch project
+          provides two complementary approaches.<br /><br />
+
+          The <b>total-correctness variant of Eris</b>, called Eris<sub>t</sub>,
+          reinterprets Eris's Hoare triples by defining their semantics as
+          a least fixed point rather than a guarded one. With this
+          interpretation, an error budget &epsilon; in the precondition
+          bounds the probability that the program never reaches a value
+          satisfying the postcondition (which includes both finishing in a
+          bad state <i>and</i> not finishing at all). If a total Hoare
+          triple holds for arbitrarily small &epsilon;, the program
+          terminates with probability 1. This gives a uniform way to
+          combine error reasoning with almost-sure termination, and is
+          used to verify algorithms such as rejection
+          samplers in Eris.<br /><br />
+
+          The <b>Caliper</b> logic takes a different route: rather than
+          directly proving termination of a program,
+          it establishes a <b>termination-preserving refinement</b>
+          to a simpler probabilistic model (e.g. a Markov chain whose
+          termination behavior is easier to analyze). Refinements are
+          established by probabilistic couplings, much as in Clutch, and
+          general higher-order recursion is handled with <b>guarded
+          recursion (L&ouml;b induction)</b><br /><br />
+
+          <b>Examples</b>:
+          <ul class="inline-list">
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/caliper/examples/nat_random_walk.v">Random walks</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/caliper/examples/listgen.v">Random list generator</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/caliper/examples/treap.v">Treaps</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/caliper/examples/galton_watson_tree.v">Galton&ndash;Watson tree sampler</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/caliper/examples/lazy_real.v">Lazy reals</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <script src="/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

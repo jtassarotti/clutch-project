@@ -78,3 +78,15 @@ img.card-img-top {
   padding: 10px;
   margin-bottom: 4px;
 }
+
+ul.inline-list {
+  list-style: none;
+  padding: 0;
+  display: inline;
+}
+ul.inline-list li {
+  display: inline;
+}
+ul.inline-list li:not(:last-child)::after {
+  content: ", ";
+}
