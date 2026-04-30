@@ -71,7 +71,7 @@
           real implementation of a program and an ideal version that is
           perfectly secure by construction.<br /><br />
 
-          The original Clutch logic provided support for proving such
+          The original <a href="pdfs/2024-popl-clutch.pdf"><b>Clutch</b></a> logic provided support for proving such
           equivalences in the setting of a higher-order language with
           mutable state. Clutch is a <b>relational</b> logic, where
           specifications relate the behaviors of two programs. The logic
@@ -83,7 +83,7 @@
           Clutch supports proving <i>exact</i> equivalences, in which the two
           programs must have precisely the same probability distribution. However, for many applications,
           it is important to weaken this to <i>approximate</i> equivalences, where one bounds
-          the distance or difference between the distributions. The Approxis logic
+          the distance or difference between the distributions. The <a href="pdfs/2025-popl-approxis.pdf"><b>Approxis</b></a> logic
           generalizes Clutch to support these approximate equivalences. It uses a separationg logic
           resource to track an "error budget" that bounds the distance between the two programs'
           distributions.<br /><br />
@@ -108,7 +108,7 @@
           small changes to its output distribution, controlled by a numeric
           <i>privacy budget</i><br /><br />
 
-          The <b>Clutch-DP</b> logic supports verifying differential privacy of
+          The <a href="pdfs/2026-pldi-clutch-dp.pdf"><b>Clutch-DP</b></a> logic supports verifying differential privacy of
           higher-order programs in this style. It treats the privacy budget
           as a <b>separation logic resource</b>, so reasoning about the
           composition of DP programs reduces to standard separation logic
@@ -135,7 +135,7 @@
           high probability, and using them safely depends on having a tight
           bound on the probability that they fail.<br /><br />
 
-          The <b>Eris</b> logic introduces <b>error credits</b>: a separation
+          The <a href="pdfs/2024-icfp-eris.pdf"><b>Eris</b></a> logic introduces <b>error credits</b>: a separation
           logic resource that tracks an upper bound on the probability that a
           program returns an erroneous result. Treating an error bound as a
           resource again brings the usual benefits of separation logic
@@ -143,7 +143,7 @@
 	  of <i>amortized error reasoning</i>, analogous to the use of
 	  amortized analysis of algorithmic complexity.
 
-          The <b>Coneris</b> logic extends the error-credit approach to
+          The <a href="pdfs/2025-icfp-coneris.pdf"><b>Coneris</b></a> logic extends the error-credit approach to
           <b>concurrent</b> programs.
           Coneris internalizes a notion of
           <i>randomized logical atomicity</i> using presampling tapes and a
@@ -165,7 +165,7 @@
         <dt>Sampler Correctness</dt>
         <dd>
 	  Although Eris was initially designed for reasoning about upper
-	  bounds of error probabilities, subsequent work showed that in fact
+	  bounds of error probabilities, <a href="pdfs/2026-cpp-distributions.pdf"><b>subsequent work</b></a> showed that in fact
 	  it is possible to prove specifications in Eris that describe
 	  the complete distribution of behaviors of a program.
 
@@ -196,7 +196,7 @@
           no syntactic loop construct to induct on. The Clutch project
           provides two complementary approaches.<br /><br />
 
-          The <b>total-correctness variant of Eris</b>, called Eris<sub>t</sub>,
+          The <b>total-correctness variant of <a href="pdfs/2024-icfp-eris.pdf">Eris</a></b>, called Eris<sub>t</sub>,
           reinterprets Eris's Hoare triples by defining their semantics as
           a least fixed point rather than a guarded one. With this
           interpretation, an error budget &epsilon; in the precondition
@@ -209,7 +209,7 @@
           used to verify algorithms such as rejection
           samplers in Eris.<br /><br />
 
-          The <b>Caliper</b> logic takes a different route: rather than
+          The <a href="pdfs/2024-icfp-caliper.pdf"><b>Caliper</b></a> logic takes a different route: rather than
           directly proving termination of a program,
           it establishes a <b>termination-preserving refinement</b>
           to a simpler probabilistic model (e.g. a Markov chain whose
