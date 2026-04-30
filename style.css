@@ -63,14 +63,26 @@ img.card-img-top {
   text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6,
+dl.properties-list > dt {
+  font-family: 'Space Grotesk', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.prose {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .btn-primary {
-  background-color: #5436c0;
-  border-color: #5436c0;
+  background-color: #0f766e;
+  border-color: #0f766e;
 }
 
 .btn-primary:hover {
-  background-color: #291879;
-  border-color: #5436c0;
+  background-color: #134e4a;
+  border-color: #0f766e;
 }
 
 .abstract {
@@ -93,7 +105,7 @@ ul.inline-list li:not(:last-child)::after {
 
 dl.properties-list > dt {
   font-size: 1.25em;
-  color: #5436c0;
+  color: #0f766e;
   margin-top: 1.5em;
   margin-bottom: 0.4em;
 }
