@@ -1,0 +1,15 @@
+version: "3"
+services:
+  server:
+    image: clutch-project:latest
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 4000:4000
+    volumes:
+      - ./:/clutch-project
+      # Mask host's .bundle/ and _site/ so the container uses its own gems and
+      # doesn't write build output back to the host.
+      - /clutch-project/.bundle
+      - /clutch-project/_site

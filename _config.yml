@@ -1,0 +1,6 @@
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yml

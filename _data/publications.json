@@ -1,0 +1,151 @@
+{
+  "publications": [
+    {
+      "title": "Modular Verification of Differential Privacy in Probabilistic Higher-Order Separation Logic",
+      "authors": [
+        "Philipp G. Haselwarter",
+        "Alejandro Aguirre",
+        "Simon Oddershede Gregersen",
+        "Kwing Hei Li",
+        "Joseph Tassarotti",
+        "Lars Birkedal"
+      ],
+      "where_published": "In PLDI 2026: ACM SIGPLAN International Conference on Programming Language Design and Implementation",
+      "pdf_url": "pdfs/2026-pldi-clutch-dp.pdf",
+      "other_urls": [
+        { "name": "Extended version", "url": "https://arxiv.org/abs/2604.12713" },
+        { "name": "Rocq development", "url": "https://github.com/logsem/clutch/tree/pldi26-clutch-dp" },
+        { "name": "Rocq artifact", "url": "https://zenodo.org/records/19089094" }
+      ]
+    },
+    {
+      "title": "Contextual Refinement of Higher-Order Concurrent Probabilistic Programs",
+      "authors": [
+        "Kwing Hei Li",
+        "Alejandro Aguirre",
+        "Joseph Tassarotti",
+        "Lars Birkedal"
+      ],
+      "where_published": "In PLDI 2026: ACM SIGPLAN International Conference on Programming Language Design and Implementation",
+      "pdf_url": "pdfs/2026-pldi-foxtrot.pdf",
+      "other_urls": [
+        { "name": "Rocq artifact", "url": "https://zenodo.org/records/18924289" }
+      ]
+    },
+    {
+      "title": "Specifications and Implementations of Random Samplers in Higher-Order Separation Logic",
+      "authors": [
+        "Virgil Marionneau",
+        "Félix Sassus Bourda",
+        "Alejandro Aguirre",
+        "Lars Birkedal"
+      ],
+      "where_published": "In CPP 2026: ACM SIGPLAN Conference on Certified Programs and Proofs",
+      "pdf_url": "pdfs/2026-cpp-distributions.pdf",
+      "other_urls": [
+        { "name": "Rocq development", "url": "https://github.com/logsem/clutch/tree/cpp26-distributions" },
+        { "name": "Artifact", "url": "https://doi.org/10.5281/zenodo.17800602" }
+      ]
+    },
+    {
+      "title": "Modular Reasoning about Error Bounds for Concurrent Probabilistic Programs",
+      "authors": [
+        "Kwing Hei Li",
+        "Alejandro Aguirre",
+        "Simon Oddershede Gregersen",
+        "Philipp G. Haselwarter",
+        "Markus de Medeiros",
+        "Joseph Tassarotti",
+        "Lars Birkedal"
+      ],
+      "where_published": "In ICFP 2025: ACM SIGPLAN International Conference on Functional Programming",
+      "pdf_url": "pdfs/2025-icfp-coneris.pdf"
+    },
+    {
+      "title": "Approximate Relational Reasoning for Higher-Order Probabilistic Programs",
+      "authors": [
+        "Philipp G. Haselwarter",
+        "Kwing Hei Li",
+        "Alejandro Aguirre",
+        "Simon Oddershede Gregersen",
+        "Joseph Tassarotti",
+        "Lars Birkedal"
+      ],
+      "where_published": "In POPL 2025: ACM SIGPLAN Symposium on Principles of Programming Languages",
+      "pdf_url": "pdfs/2025-popl-approxis.pdf",
+      "other_urls": [
+        { "name": "Artifact", "url": "https://doi.org/10.5281/zenodo.13939302" }
+      ]
+    },
+    {
+      "title": "Tachis: Higher-Order Separation Logic with Credits for Expected Costs",
+      "authors": [
+        "Philipp G. Haselwarter",
+        "Kwing Hei Li",
+        "Markus de Medeiros",
+        "Simon Oddershede Gregersen",
+        "Alejandro Aguirre",
+        "Joseph Tassarotti",
+        "Lars Birkedal"
+      ],
+      "where_published": "In OOPSLA 2024: ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications",
+      "pdf_url": "pdfs/2024-oopsla-tachis.pdf",
+      "other_urls": [
+        { "name": "Artifact", "url": "https://zenodo.org/records/12659527" },
+        { "name": "Rocq development", "url": "https://github.com/logsem/clutch" }
+      ]
+    },
+    {
+      "title": "Almost-Sure Termination by Guarded Refinement",
+      "authors": [
+        "Simon Oddershede Gregersen",
+        "Alejandro Aguirre",
+        "Philipp G. Haselwarter",
+        "Joseph Tassarotti",
+        "Lars Birkedal"
+      ],
+      "where_published": "In ICFP 2024: ACM SIGPLAN International Conference on Functional Programming",
+      "pdf_url": "pdfs/2024-icfp-caliper.pdf",
+      "other_urls": [
+        { "name": "Artifact", "url": "https://zenodo.org/records/11481248" },
+        { "name": "Rocq development", "url": "https://github.com/logsem/clutch" }
+      ]
+    },
+    {
+      "title": "Error Credits: Resourceful Reasoning about Error Bounds for Higher-Order Probabilistic Programs",
+      "authors": [
+        "Alejandro Aguirre",
+        "Philipp G. Haselwarter",
+        "Markus de Medeiros",
+        "Kwing Hei Li",
+        "Simon Oddershede Gregersen",
+        "Joseph Tassarotti",
+        "Lars Birkedal"
+      ],
+      "where_published": "In ICFP 2024: ACM SIGPLAN International Conference on Functional Programming",
+      "pdf_url": "pdfs/2024-icfp-eris.pdf",
+      "other_urls": [
+        { "name": "Artifact", "url": "https://zenodo.org/records/11489778" },
+        { "name": "Rocq development", "url": "https://github.com/logsem/clutch" }
+      ],
+      "awards": [ "ICFP 2024 Distinguished Paper Award" ]
+    },
+    {
+      "title": "Asynchronous Probabilistic Couplings in Higher-Order Separation Logic",
+      "authors": [
+        "Simon Oddershede Gregersen",
+        "Alejandro Aguirre",
+        "Philipp G. Haselwarter",
+        "Joseph Tassarotti",
+        "Lars Birkedal"
+      ],
+      "where_published": "In POPL 2024: ACM SIGPLAN Symposium on Principles of Programming Languages",
+      "pdf_url": "pdfs/2024-popl-clutch.pdf",
+      "other_urls": [
+        { "name": "Extended version", "url": "https://arxiv.org/abs/2301.10061" },
+        { "name": "Rocq development", "url": "https://github.com/logsem/clutch" },
+        { "name": "Artifact", "url": "https://zenodo.org/records/8424490" }
+      ]
+    }
+  ]
+}

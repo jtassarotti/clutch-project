@@ -1,0 +1,154 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="The Clutch Project: a higher-order probabilistic separation logic framework, built on Iris and implemented in Rocq.">
+  <meta name="author" content="">
+  <meta name="referrer" content="origin-when-cross-origin">
+
+  <title>Clutch Project</title>
+
+  <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="bg-secondary py-5 mb-3 text-sm-center" style="--bs-bg-opacity : 0.1">
+      <div class="container-fluid">
+        <h1 style="margin-bottom: 20px;">The Clutch Project</h1>
+        <p class="lead">A higher-order probabilistic separation logic framework, <br> built on Iris and implemented in the Rocq Prover</p>
+        <p>
+          <a href="https://github.com/logsem/clutch" class="btn btn-primary">Rocq Formalization</a>
+        </p>
+        <p>
+          <a href="#about" class="btn btn-light border" role="button">About</a>
+          <a href="#events" class="btn btn-light border" role="button">Events</a>
+          <a href="#publications" class="btn btn-light border" role="button">Publications</a>
+          <a href="#groups" class="btn btn-light border" role="button">Research groups</a>
+          <a href="#grants" class="btn btn-light border" role="button">Grants</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="container" style="margin-bottom: 20px;">
+        <div>
+          <a name="about"></a>
+          <h2>About</h2>
+        </div>
+        <div>
+          <p>
+            The Clutch project is a family of program logics for
+            reasoning about higher-order probabilistic programs. It
+            builds on the <a href="https://iris-project.org/">Iris</a>
+            separation logic framework in the Rocq Prover.  The
+            included logics can be used for verifying properties such
+            as contextual equivalence, error bounds, expected cost,
+            almost-sure termination, and differential privacy.
+          </p>
+          <p>
+            The source code, including all variants developed in the publications
+            below, lives in the
+            <a href="https://github.com/logsem/clutch">logsem/clutch</a> repository.
+          </p>
+        </div>
+      </div>
+
+      <div class="container" style="margin-bottom: 20px;">
+        <div>
+          <a name="events"></a>
+          <h2>Events</h2>
+          <ul>
+            <li><b>11 May–15 May 2026</b>: Lectures on <a
+                href="https://conferences.cirm-math.fr/3489.html">Verifying Probabilistic Programs with
+                Separation Logic</a> at <a href="https://conferences.cirm-math.fr/3489.html">EPIT 2026</a>,
+                CIRM, Marseille, France</li>
+            <li><b>11 January 2026</b>: <a
+                href="https://popl26.sigplan.org/details/POPL-2026-tutorials/8/Verifying-Probabilistic-Programs-Using-Separation-Logic">Tutorial
+                on probabilistic program verification</a> at POPL, Rennes, France</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container" style="margin-bottom: 20px;">
+        <div>
+          <a name="publications"></a>
+          <h2>Publications</h2>
+        </div>
+
+        <div>
+          <p>Below is an overview of publications based on the Clutch framework.</p>
+        </div>
+
+        <div>
+          {% include publications.html publications=site.data.publications.publications %}
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-secondary py-5 mb-3" style="--bs-bg-opacity : 0.1">
+      <div class="container">
+        <a name="groups"></a>
+        <h2>Main research groups involved</h2>
+
+        <div class="card-group">
+          <div class="card mx-2 border">
+            <a href="http://cs.au.dk/" class="card-link" title="Visit Aarhus University">
+              <img class="card-img-top" style="width : auto; max-width : 80%;" src="gfx/au.png" alt="Aarhus University">
+            </a>
+            <div class="card-footer text-muted" style="text-align: center;">
+              <span class="muted" style="font-size: 10pt;">Contact: <a href="http://cs.au.dk/~birke/">Lars
+                  Birkedal</a></span>
+            </div>
+          </div>
+          <div class="card mx-2 border">
+            <a href="https://cims.nyu.edu/" class="card-link" title="Visit the Courant Institute of Mathematical Sciences, NYU">
+              <img class="card-img-top" style="width : auto; max-width : 80%;" src="gfx/NYU_Short_RGB_Color.png" alt="New York University">
+            </a>
+            <div class="card-footer text-muted" style="text-align: center;">
+              <span class="muted" style="font-size: 10pt;">Contact: <a href="https://cs.nyu.edu/~jt4767/">Joseph
+                  Tassarotti</a></span>
+            </div>
+          </div>
+          <div class="card mx-2 border">
+            <a href="https://cispa.de/" class="card-link" title="Visit CISPA Helmholtz Center for Information Security">
+              <img class="card-img-top" style="width : auto; max-width : 80%;" src="gfx/CISPA_Logo_without_Helmholtz_RGB.png" alt="CISPA Helmholtz Center for Information Security">
+            </a>
+            <div class="card-footer text-muted" style="text-align: center;">
+              <span class="muted" style="font-size: 10pt;">Contact: <a href="https://simongregersen.com/">Simon
+                  Oddershede Gregersen</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container container-spacing" style="margin-bottom: 60px;">
+      <div>
+        <a name="grants"></a>
+        <h2>Grants</h2>
+        <p class="lead">
+          The Clutch project has been supported in part by the following grants:
+        </p>
+        <ul>
+          <li>National Science Foundation, grants no. 2225441, 2318724, and 2338317</li>
+          <li>Carlsberg Foundation, grant no. CF23-0791</li>
+          <li>VILLUM Foundation, Villum Investigator grants no. VIL25804 and no. VIL73403, including the Center for Basic Research in Program Verification (CPV)</li>
+          <li>European Union (ERC, CHORDS), grant no. 101096090</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
