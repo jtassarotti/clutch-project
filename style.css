@@ -41,6 +41,10 @@ div.buttons {
   text-align: center;
 }
 
+ol.setup-steps > li {
+  margin-bottom: 1em;
+}
+
 .site-logo {
   width: 100%;
   max-width: 440px;
