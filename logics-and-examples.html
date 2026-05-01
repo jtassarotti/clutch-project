@@ -96,6 +96,10 @@
           resource to track an "error budget" that bounds the distance between the two programs'
           distributions.<br /><br />
 
+          Both Clutch and Approxis target a sequential
+          language. The <a href="pdfs/2026-pldi-foxtrot.pdf"><b>Foxtrot</b></a>
+          logic extends this line of work to <b>concurrent</b> probabilistic programs.<br /><br />
+
           <b>Examples</b>:
               <ul class="inline-list">
                 <li><a href="https://github.com/logsem/clutch/blob/main/theories/clutch/examples/lazy_eager_coin.v">Lazy/eager coin</a></li>
@@ -106,6 +110,8 @@
                 <li><a href="https://github.com/logsem/clutch/blob/main/theories/approxis/examples/prf_cpa.v">IND$-CPA security of a PRF-based symmetric encryption scheme</a></li>
                 <li><a href="https://github.com/logsem/clutch/blob/main/theories/approxis/examples/b_tree.v">Sampling a uniform key from a B+ tree</a></li>
                 <li><a href="https://github.com/logsem/clutch/blob/main/theories/approxis/examples/rejection_samplers.v">Rejection samplers</a></li>
+                <li><a href="https://github.com/logsem/clutch/blob/main/theories/foxtrot/examples/entropy_mixer.v">Concurrent entropy mixer</a></li>
+                <li><a href="https://github.com/logsem/clutch/blob/main/theories/foxtrot/examples/batch_sampling.v">Concurrent batch sampling</a></li>
               </ul>
         </dd>
         <dt>Differential Privacy</dt>
