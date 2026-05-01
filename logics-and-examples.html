@@ -195,6 +195,36 @@
             <li><a href="https://github.com/logsem/clutch/tree/cpp26-distributions/theories/eris/lib/sampling/beta_binomial">Beta-binomial</a></li>
           </ul>
         </dd>
+        <dt>Expected Cost Analysis</dt>
+        <dd>
+          In probabilistic programs, the resources consumed by the program
+	  (time, space, entropy usage) are random variables.
+	  The expected value of these random variables gives the
+	  average cost of the program.<br /><br />
+
+          The <a href="pdfs/2024-oopsla-tachis.pdf"><b>Tachis</b></a>
+          logic introduces <b>probabilistic cost credits</b>: a
+          separation logic resource that can be spent to pay for the
+          cost of operations. These are a probabilistic variant of
+          time credit resources, which had been used in prior
+          separation logics to give worst-case bounds on resource use
+          in deterministic programs. Tachis is parametric in the cost
+          model, so the same logic supports reasoning about expected
+          running time, expected entropy usage, and other
+          resources.<br /><br />
+
+          <b>Examples</b>:
+          <ul class="inline-list">
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/tachis/examples/quicksort.v">Randomized quicksort</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/tachis/examples/couponcollector.v">Coupon collector</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/tachis/examples/batchsampling.v">Batch sampling</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/tachis/examples/meldable_heap.v">Meldable heaps</a></li>
+            <li><a href="https://github.com/logsem/clutch/tree/main/theories/tachis/examples/hashmap">Hash tables with amortized expected cost</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/tachis/examples/fisher_yates.v">Fisher&ndash;Yates shuffle</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/tachis/examples/kway_merge.v">K-way merge</a></li>
+            <li><a href="https://github.com/logsem/clutch/blob/main/theories/tachis/examples/geometric.v">Geometric distribution sampler</a></li>
+          </ul>
+        </dd>
         <dt>Almost-Sure Termination</dt>
         <dd>
           A randomized program <i>almost-surely terminates</i> if it
