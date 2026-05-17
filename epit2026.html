@@ -48,18 +48,16 @@
     </div>
 
     <div class="container prose" style="margin-bottom: 60px;">
-      <h2 id="overview">EPIT 2026: Verifying Probabilistic Programs with Separation Logic</h2>
+      <h2 id="overview">Verifying Probabilistic Programs with Separation Logic</h2>
 
       <p class="lead">
-        11&ndash;15 May 2026, <a href="https://conferences.cirm-math.fr/3489.html">CIRM</a>, Marseille, France.
+        Lectures by <a href="https://www.cs.nyu.edu/~jt4767/">Joseph Tassarotti</a> (New York University).<br>
+        11&ndash;15 May 2026, <a href="https://conferences.cirm-math.fr/3489.html">EPIT 2026</a>, CIRM, Marseille, France.
       </p>
 
       <p>
         This page collects materials for the EPIT 2026 lectures on
-        <a href="https://conferences.cirm-math.fr/3489.html">Verifying Probabilistic Programs with Separation Logic</a>.
-        It is intended for course attendees and will be updated with
-        slides, exercises, and pointers to the relevant Rocq
-        developments.
+        Verifying Probabilistic Programs with Separation Logic.
       </p>
 
       <h3 id="software-setup">Software setup</h3>
@@ -79,11 +77,47 @@ git checkout epit2026
         <li>(Optional) Set up the VS Code Dev Container by following the <a href="https://github.com/logsem/clutch#visual-studio-code">Visual Studio Code</a> section of the README.</li>
       </ol>
 
-      <h3 id="lecture-notes">Lecture notes and slides</h3>
-      <p><i>To be posted.</i></p>
-
-      <h3 id="exercises">Exercises</h3>
-      <p><i>To be posted.</i></p>
+      <h3 id="lecture-notes">Slides</h3>
+      <ul>
+        <li>
+          <a href="pdfs/2026-epit-part1.pdf">Part 1 slides</a>
+          <ul>
+            <li>Background on modern separation logic and Iris: Hoare triples,
+              points-to, the frame rule, persistent modality, magic wand,
+              weakest preconditions, later modality and L&ouml;b induction.</li>
+            <li>Probabilistic preliminaries: distributions, a probabilistic
+              language and its operational semantics, with small examples.</li>
+            <li>A comparison of three approaches to probabilistic program
+              logics: distributional assertions, expectation transformers,
+              and lifting-based logics.</li>
+            <li>Introduction to Eris and error credits for
+              &ldquo;up-to-bad&rdquo; reasoning.</li>
+          </ul>
+        </li>
+        <li>
+          <a href="pdfs/2026-epit-part2.pdf">Part 2 slides</a>
+          <ul>
+            <li>A worked example based on Morris's approximate counter,
+              developed through three progressively tighter specifications.</li>
+            <li>Almost-sure termination with Eris<sub>t</sub>.</li>
+            <li>An error-credit induction principle for proving almost-sure
+              termination.</li>
+          </ul>
+        </li>
+        <li>
+          <a href="pdfs/2026-epit-part3.pdf">Part 3 slides</a>
+          <ul>
+            <li>Pitfalls of floating-point sampling (e.g.&nbsp;Mironov's
+              attack on &epsilon;-differential privacy) motivating exact
+              sampling via computable reals.</li>
+            <li>Verifying continuous samplers with Continuous-Eris.
+	      Using presampling tapes for reasoning about sampled values
+              ahead of time.</li>
+            <li>Relational reasoning: contextual equivalence and
+              refinement, logical relations, and couplings in Clutch</li>
+          </ul>
+        </li>
+      </ul>
 
       <h3 id="background-reading">Background reading</h3>
       <p>
